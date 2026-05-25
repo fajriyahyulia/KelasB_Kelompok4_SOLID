@@ -1,3 +1,6 @@
+# Abid Satriyo (K3525045)
+# Solusi DIP
+
 from abc import ABC, abstractmethod
 
 # Interface untuk kandang
