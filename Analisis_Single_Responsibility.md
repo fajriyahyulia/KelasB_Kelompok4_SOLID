@@ -5,7 +5,7 @@
 ---
 
 ## 1. Pengertian Singkat SRP
-**Single Responsibility Principle (SRP)** menyatakan bahwa sebuah *class* harus memiliki satu, dan hanya satu, alasan untuk berubah. Artinya, sebuah *class* harus didesain untuk menjalankan satu tugas atau tanggung jawab spesifik saja di dalam sistem.
+**Single Responsibility Principle (SRP)** menyatakan bahwa setiap kelas harus memiliki satu tanggung jawab utama. Artinya, sebuah kelas hanya boleh memiliki satu alasan untuk berubah. Jika sebuah kelas memiliki lebih dari satu tanggung jawab, maka kode tersebut akan sulit untuk dikelola dan dipelihara.
 
 ---
 
@@ -60,6 +60,8 @@ class PetugasKebersihan:
         print("Petugas Kebersihan: Kandang telah dibersihkan.")
 ```
 
-4. Kesimpulan
-Dengan memisahkan tanggung jawab tersebut, kode menjadi lebih terorganisir dan memiliki tingkat kohesi yang tinggi. Jika sewaktu-waktu prosedur pembersihan kandang menjadi lebih kompleks (misal: perlu pengecekan jadwal atau penggunaan disinfektan tertentu), pemrogram hanya perlu memodifikasi class PetugasKebersihan tanpa khawatir merusak logika penyimpanan data yang ada di class Kandang.
+## 4. Kesimpulan
 
+Dengan memisahkan tanggung jawab tersebut, kode menjadi lebih terorganisir dan memiliki tingkat **kohesi yang tinggi (*high cohesion*)**. 
+
+Jika sewaktu-waktu prosedur pembersihan kandang menjadi lebih kompleks (misalnya memerlukan pengecekan jadwal, sistem shift, atau penggunaan disinfektan tertentu), pemrogram hanya perlu memodifikasi *class* `PetugasKebersihan` tanpa khawatir akan merusak atau mengganggu logika penyimpanan data yang ada di dalam *class* `Kandang`.
