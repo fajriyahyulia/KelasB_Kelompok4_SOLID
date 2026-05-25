@@ -41,7 +41,6 @@ class KebunBinatang:
 
 if __name__ == "__main__":
     kebun = KebunBinatang()
-    
     kucing = Kucing("Momo", "Mamalia")
     elang = BurungElang("Garuda", "Burung")
     
