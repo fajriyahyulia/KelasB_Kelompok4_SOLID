@@ -1,21 +1,21 @@
-# 🐾 Analisis Prinsip SOLID — Manajemen Kebun Binatang
+# Analisis Prinsip SOLID — Manajemen Kebun Binatang
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-2ECC71?style=flat)
 ![SOLID](https://img.shields.io/badge/Prinsip-SOLID-1F3864?style=flat)
 ![Kelas](https://img.shields.io/badge/Kelas-B_Kelompok_4-E67E22?style=flat)
 
-> 📚 Pemrograman Berorientasi Projek
-> 🏫 Program Studi Pendidikan Teknik Informatika dan Komputer
-> 📅 Tahun Akademik 2024/2025
+> Pemrograman Berorientasi Projek
+> Program Studi Pendidikan Teknik Informatika dan Komputer
+> Tahun Akademik 2024/2025
 
 ---
 
-## 👥 Anggota Kelompok
+## Anggota Kelompok
 
 | NIM | Nama | Bagian |
 |---|---|---|
-| K3525005 | Fajriyah Yulia Az Zahra | 👑 Ketua & Koordinator |
+| K3525005 | Fajriyah Yulia Az Zahra | Ketua & Koordinator |
 | K3525006 | Fatimah Az Zahra | S — Single Responsibility Principle |
 | K3525039 | Riska Nur Rahmawati | O — Open/Closed Principle |
 | K3525042 | Vincensius Vicko Riska Saputra | L — Liskov Substitution Principle |
@@ -24,7 +24,7 @@
 
 ---
 
-## 📌 Deskripsi Proyek
+## Deskripsi Proyek
 
 Repositori ini berisi hasil kerja kelompok dalam menganalisis dan menerapkan prinsip-prinsip **SOLID** pada studi kasus program manajemen **Kebun Binatang** berbasis Python.
 
@@ -32,7 +32,9 @@ Kode awal yang diberikan terdiri dari tiga class (`Hewan`, `Kandang`, `KebunBina
 
 ---
 
-## 📁 Struktur Direktori
+## Struktur Direktori
+
+```
 📦 Kelas_B_Kelompok4_SOLID
 📁 solusi
    📄 solusi_dip.py
@@ -44,21 +46,21 @@ Kode awal yang diberikan terdiri dari tiga class (`Hewan`, `Kandang`, `KebunBina
 📄 README.md
 📄 analisis.md
 📄 kode_awal.py
+```
 
 | File/Folder | Keterangan |
 |---|---|
 | `kode_awal.py` | Kode program original sebelum refactoring |
 | `analisis.md` | Penjelasan lengkap analisis & solusi tiap prinsip |
-| `solusi/srp.py` | Refactoring khusus Single Responsibility Principle |
-| `solusi/ocp.py` | Refactoring khusus Open/Closed Principle |
-| `solusi/lsp.py` | Refactoring khusus Liskov Substitution Principle |
-| `solusi/isp.py` | Refactoring khusus Interface Segregation Principle |
-| `solusi/dip.py` | Refactoring khusus Dependency Inversion Principle |
-| `solusi/solid_lengkap.py` | Kode final yang memenuhi semua prinsip SOLID |
+| `solusi/solusi_srp.py` | Refactoring khusus Single Responsibility Principle |
+| `solusi/solusi_ocp.py` | Refactoring khusus Open/Closed Principle |
+| `solusi/solusi_lsp.py` | Refactoring khusus Liskov Substitution Principle |
+| `solusi/solusi_isp.py` | Refactoring khusus Interface Segregation Principle |
+| `solusi/solusi_dip.py` | Refactoring khusus Dependency Inversion Principle |
 
 ---
 
-## 🔍 Kode Awal yang Dianalisis
+## Kode Awal yang Dianalisis
 
 ```python
 class Hewan:
@@ -96,44 +98,44 @@ class KebunBinatang:
 
 ---
 
-## 📊 Hasil Analisis SOLID
+## Hasil Analisis SOLID
 
-### ❓ Apakah kode sudah memenuhi semua prinsip SOLID?
+### Apakah kode sudah memenuhi semua prinsip SOLID?
 
 > **Belum.** Setelah dianalisis, kode tersebut melanggar hampir semua prinsip SOLID. Tidak ada satu prinsip pun yang terpenuhi secara penuh.
 
-### 📋 Ringkasan Status
+### Ringkasan Status
 
 | Prinsip | Status | Masalah Utama |
 |---|---|---|
-| **S** — Single Responsibility | ⚠️ Sebagian | `terbang()` tidak relevan untuk semua hewan |
-| **O** — Open/Closed | ❌ Dilanggar | Harus modifikasi kode lama untuk fitur baru |
-| **L** — Liskov Substitution | ❌ Dilanggar | Subclass tidak bisa menggantikan parent secara logis |
-| **I** — Interface Segregation | ❌ Dilanggar | Semua hewan dipaksa punya method `terbang()` |
-| **D** — Dependency Inversion | ❌ Dilanggar | `KebunBinatang` bergantung pada class konkret |
+| **S** — Single Responsibility | Sebagian | `terbang()` tidak relevan untuk semua hewan |
+| **O** — Open/Closed | Dilanggar | Harus modifikasi kode lama untuk fitur baru |
+| **L** — Liskov Substitution | Dilanggar | Subclass tidak bisa menggantikan parent secara logis |
+| **I** — Interface Segregation | Dilanggar | Semua hewan dipaksa punya method `terbang()` |
+| **D** — Dependency Inversion | Dilanggar | `KebunBinatang` bergantung pada class konkret |
 
 ---
 
-### 🔎 Analisis Detail per Prinsip
+### Analisis Detail per Prinsip
 
-#### ⚠️ S — Single Responsibility Principle *(Sebagian Terpenuhi)*
+#### S — Single Responsibility Principle *(Sebagian Terpenuhi)*
 Pemisahan class secara umum sudah memiliki tujuan masing-masing. Namun, method `terbang()` di dalam class `Hewan` merupakan tanggung jawab yang tidak relevan untuk semua hewan — sapi, ikan, dan singa tetap mewarisi method ini meskipun tidak bisa terbang.
 
-#### ❌ O — Open/Closed Principle *(Dilanggar)*
+#### O — Open/Closed Principle *(Dilanggar)*
 Jika ingin menambahkan perilaku baru (misalnya hewan yang bisa berenang), developer harus memodifikasi langsung method `rawat_semua_hewan()` di class `KebunBinatang`. Sistem belum tertutup untuk modifikasi.
 
-#### ❌ L — Liskov Substitution Principle *(Dilanggar)*
+#### L — Liskov Substitution Principle *(Dilanggar)*
 Method `rawat_semua_hewan()` memaksa **semua** hewan memanggil `terbang()`. Jika Harimau atau Kura-kura dimasukkan ke `hewan_list`, mereka akan dipaksa "terbang" — yang secara logika sangat keliru dan merusak integritas program.
 
-#### ❌ I — Interface Segregation Principle *(Dilanggar)*
+#### I — Interface Segregation Principle *(Dilanggar)*
 Class `Hewan` memiliki method `terbang()` yang memaksa setiap hewan bergantung pada method yang tidak mereka butuhkan. Perilaku `terbang()` seharusnya dipisah ke class tersendiri seperti `BisaTerbang`.
 
-#### ❌ D — Dependency Inversion Principle *(Dilanggar)*
-Class `KebunBinatang` bergantung langsung pada class konkret `Kandang` melalui `self.kandang = Kandang()` *(tight coupling)*. Seharusnya bergantung pada abstraksi seperti interface `KandangAbstrak`.
+#### D — Dependency Inversion Principle *(Dilanggar)*
+Class `KebunBinatang` bergantung langsung pada class konkret `Kandang` melalui `self.kandang = Kandang()` *(tight coupling)*. Seharusnya bergantung pada abstraksi seperti interface `IKandang`.
 
 ---
 
-## ✅ Solusi Refactoring
+## Solusi Refactoring
 
 Solusi lengkap menggunakan pendekatan berikut:
 - **Abstract Base Class (ABC)** untuk mendefinisikan abstraksi
@@ -172,11 +174,8 @@ class Ikan(Hewan, BisaBerenang):
     def berenang(self):
         print(f"{self.nama} sedang berenang.")
 
-class Singa(Hewan):
-    pass
-
 # Abstraksi Kandang (DIP)
-class KandangAbstrak(ABC):
+class IKandang(ABC):
     @abstractmethod
     def tambah_hewan(self, hewan): pass
     @abstractmethod
@@ -184,7 +183,7 @@ class KandangAbstrak(ABC):
     @abstractmethod
     def bersihkan_kandang(self): pass
 
-class Kandang(KandangAbstrak):
+class Kandang(IKandang):
     def __init__(self):
         self.hewan_list = []
     def tambah_hewan(self, hewan):
@@ -196,7 +195,7 @@ class Kandang(KandangAbstrak):
 
 # Dependency Injection (DIP)
 class KebunBinatang:
-    def __init__(self, kandang: KandangAbstrak):
+    def __init__(self, kandang: IKandang):
         self.kandang = kandang
     def rawat_semua_hewan(self):
         for hewan in self.kandang.get_semua_hewan():
@@ -207,35 +206,35 @@ class KebunBinatang:
                 hewan.berenang()
 ```
 
-> 📄 Lihat kode lengkap di [`solusi/solid_lengkap.py`](solusi/solid_lengkap.py)
-
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ```bash
 # Clone repository
-git clone https://github.com/fajriyahyulia/akubelajar.git
-cd akubelajar
+git clone https://github.com/fajriyahyulia/KelasB_Kelompok4_SOLID.git
+cd KelasB_Kelompok4_SOLID
 
 # Jalankan kode awal
 python kode_awal.py
 
-# Jalankan solusi lengkap
-python solusi/solid_lengkap.py
+# Jalankan salah satu solusi
+python solusi/solusi_srp.py
 ```
 
 ---
 
-## 📖 Referensi
+## Referensi
 
-- Martin, R. C. (2003). *Agile Software Development: Principles, Patterns, and Practices*. Prentice Hall.
-- [Python ABC Documentation](https://docs.python.org/3/library/abc.html)
-- [SOLID Principles — Wikipedia](https://en.wikipedia.org/wiki/SOLID)
+- Yuana, R. A. (2025). *SOLID Principles: Konsep Single Responsibility dalam Koding*. Rosihan Ari's Blog. https://blog.rosihanari.net/solid-principles-pentingnya-single-responsibility-principle-dalam-koding/
+- Yuana, R. A. (2025). *SOLID Principles: Memahami Open-Closed Principle*. Rosihan Ari's Blog. https://blog.rosihanari.net/solid-principles-memahami-open-closed-principle-ocp/
+- Yuana, R. A. (2025). *SOLID Principles: Pentingnya Prinsip Liskov Substitution*. Rosihan Ari's Blog. https://blog.rosihanari.net/solid-principles-memahami-prinsip-liskov-substitution/
+- Yuana, R. A. (2025). *SOLID Principles: Pentingnya Prinsip Interface Segregation dalam Coding*. Rosihan Ari's Blog. https://blog.rosihanari.net/solid-principles-apa-itu-interface-segregation-principle/
+- Yuana, R. A. (2025). *SOLID Principles: Dependency Inversion Principle dalam Pemrograman*. Rosihan Ari's Blog. https://blog.rosihanari.net/konsep-solid-dependency-inversion-principle-dalam-pemrograman/
+- Python Software Foundation. (2024). *abc — Abstract Base Classes*. https://docs.python.org/3/library/abc.html
 
 ---
 
 <div align="center">
   <sub>Kelompok 4 — Kelas B | Pendidikan Teknik Informatika dan Komputer | 2024/2025</sub>
 </div>
-Tinggal klik icon copy di pojok kanan atas kotak teks di atas, lalu paste langsung ke GitHub! 😊
