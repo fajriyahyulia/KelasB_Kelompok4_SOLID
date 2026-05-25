@@ -236,5 +236,5 @@ python solusi/solusi_srp.py
 ---
 
 <div align="center">
-  <sub>Kelompok 4 — Kelas B | Pendidikan Teknik Informatika dan Komputer | 2024/2025</sub>
+  <sub>Kelompok 4 — Kelas B | Pendidikan Teknik Informatika dan Komputer | 2025/2026</sub>
 </div>
