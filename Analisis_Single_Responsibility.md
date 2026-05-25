@@ -34,15 +34,15 @@ class Kandang:
 >
 > Memiliki lebih dari satu alasan untuk berubah adalah tanda yang jelas bahwa kode ini telah melanggar **Single Responsibility Principle (SRP)**.
 
+---
+
 ## 3. Solusi dan Refactoring Kode
 
 Untuk memperbaiki pelanggaran ini, kami melakukan ekstraksi tanggung jawab operasional (kebersihan) ke dalam *class* baru yang berdiri sendiri.
 
 ### Langkah Perbaikan:
 1. **Menghapus *method* `bersihkan_kandang()` dari *class* `Kandang`** Kini *class* `Kandang` murni berfungsi hanya sebagai tempat atau struktur data penyimpan objek hewan.
-
 2. **Membuat *class* baru bernama `PetugasKebersihan`** Tugas satu-satunya dari *class* baru ini adalah menangani dan mengelola seluruh logika kebersihan fasilitas.
-
 3. **Mendelegasikan Operasional Kebersihan** Di dalam *class* `KebunBinatang`, operasional kebersihan kini tidak lagi dilakukan oleh kandang itu sendiri, melainkan didelegasikan langsung kepada objek dari `PetugasKebersihan`.
 ```python
 class Kandang:
@@ -53,12 +53,13 @@ class Kandang:
     def tambah_hewan(self, hewan):
         self.hewan_list.append(hewan)
 
-
 class PetugasKebersihan:
     """Tanggung Jawab 2: Operasional pembersihan"""
     def bersihkan_kandang(self, kandang):
         print("Petugas Kebersihan: Kandang telah dibersihkan.")
 ```
+
+---
 
 ## 4. Kesimpulan
 
