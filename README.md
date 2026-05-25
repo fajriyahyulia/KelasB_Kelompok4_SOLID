@@ -3,11 +3,12 @@
 Tugas Analisis Prinsip SOLID
 
 Nama Anggota Kelompok:
-- Fajriyah Yulia Az Zahra K3525005
-- Fatimah Az Zahra K3525006
-- Riska Nur Rahmawati K3525039
-- Vincensius Vicko Riska Saputra K3525042
-- Wijang Pratama Putra K3525043
+- Fajriyah Yulia Az Zahra K3525005 (Ketua)
+- Fatimah Az Zahra K3525006 (SRP)
+- Riska Nur Rahmawati K3525039 (OCP)
+- Vincensius Vicko Riska Saputra K3525042 (LSP)
+- Wijang Pratama Putra K3525043 (ISP)
+- Abid Satriyo Maulana K3525045 (DIP)
   
 Repositori ini berisi hasil kerja kelompok kami dalam menganalisis dan menerapkan prinsip-prinsip SOLID pada studi kasus program manajemen Kebun Binatang berbasis Python.
 
