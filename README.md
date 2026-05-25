@@ -5,9 +5,9 @@
 ![SOLID](https://img.shields.io/badge/Prinsip-SOLID-1F3864?style=flat)
 ![Kelas](https://img.shields.io/badge/Kelas-B_Kelompok_4-E67E22?style=flat)
 
-> Pemrograman Berorientasi Projek
+> Pemrograman Berorientasi Objek
 > Program Studi Pendidikan Teknik Informatika dan Komputer
-> Tahun Akademik 2024/2025
+> Tahun Akademik 2025/2026
 
 ---
 
