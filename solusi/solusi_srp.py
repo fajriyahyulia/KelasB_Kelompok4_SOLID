@@ -49,10 +49,6 @@ class KebunBinatang:
         # Tanggung jawab kebersihan kini diserahkan ke class ahlinya
         self.petugas.bersihkan_kandang(self.kandang)
 
-
-# ==========================================
-# Contoh Penggunaan Kode:
-# ==========================================
 if __name__ == "__main__":
     burung = Hewan("Burung Beo", "Burung")
     
