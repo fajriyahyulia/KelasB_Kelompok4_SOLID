@@ -1,4 +1,5 @@
-# solusi_srp.py
+#Fatimah Az Zahra K3525006
+#Solusi_srp.py
 class Hewan:
   """Tanggung jawab: Menyimpan data dan perilaku dasar entitas hewan."""
     def __init__(self, nama, jenis):
